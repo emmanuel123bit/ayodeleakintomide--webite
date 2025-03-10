@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #searchQuery {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AI Voice Search</h1>
+    <button onclick="startVoiceSearch()">🎤 Click to Speak</button>
+    <input type="text" id="searchQuery" placeholder="Your search will appear here..." readonly>
+
+    <script>
+        function startVoiceSearch() {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = "en-US"; 
+            recognition.start();
+
+            recognition.onresult = function(event) {
+                let speechResult = event.results[0][0].transcript;
+                document.getElementById("searchQuery").value = speechResult;
+
+                // Perform a Google search with recognized voice input
+                window.open(`https://www.google.com/search?q=${encodeURIComponent(speechResult)}`, "_blank");
+            };
+
+            recognition.onerror = function(event) {
+                alert("Error occurred: " + event.error);
+            };
+        }
+    </script>
+
+</body>
+</html>
