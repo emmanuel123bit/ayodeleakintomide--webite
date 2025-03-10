@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<body>
+   
+<style>
+    .subscribe-button {
+         background-color: rgb(200, 0, 0);
+         color: white;
+         border: none;
+         cursor: pointer;
+         height: 36px;
+         border-radius: 2px;
+         width: 105px;
+         margin-right: 8px;
+         transition: opacity, 0.15s ;
+     }
+     .subscribe-button:hover {
+        opacity: 0.8;
+     }
+ 
+     .subscribe-button:active {
+         opacity: 0.5;;
+     }
+ 
+    .join-button {
+         background-color: white;
+         color: rgb(105, 105, 241);
+         border: solid rgba(0, 0, 218, 0.575);
+        border-width:1px ;
+        height: 36px;
+        width: 62px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: background-color, 0.15s,
+        color 0.15s;
+    }
+    .join-button:hover {
+        background-color: rgba(81, 81, 212, 0.575);
+    }
+    .join-button:active {
+         opacity: 0.7;
+    }
+ 
+ 
+    .tweet-button {
+         background-color: rgb(77, 126, 218);
+         color: #fff;
+         border: solid rgba(0, 0, 218, 0.575);
+         border-width:1px ;
+         height: 36px;
+         width: 75px;
+         border-radius: 20px;
+         cursor: pointer;
+         font-weight: bold;
+         font-size: large;
+         transition: box-shadow, 0.15s,
+         color 0.15s ;
+    }
+    .tweet-button:hover {
+     box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.15);
+     }
+    </style>
+ <button class="subscribe-button"  onclick="alert('Subscribed!')">subcribe</button>
+ <button class="join-button"  onclick="alert('Joined!')">JOIN</button>
+ <button class="tweet-button"  onclick="alert('Tweeted!')">Tweet</button> 
+</body>
+</html>

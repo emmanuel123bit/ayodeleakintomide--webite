@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Grid</title>
+  <link rel="stylesheet" href="link.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    
+
+    body {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    
+
+    .emm {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .thumbnail {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .video-details {
+      display: flex;
+      margin-top: 8px;
+    }
+
+    .channel-pic {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+    }
+
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .video-info {
+      flex: 1;
+      margin-left: 10px;
+    }
+
+    .video-title {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 18px;
+      margin-bottom: 6px;
+    }
+
+    .channel-name, .views-date {
+      font-size: 12px;
+      color: rgb(96, 96, 96);
+    }
+    .search-bar {
+      flex : 1;
+      height: 36;
+      display: flex;
+      align-items: center;
+      border-radius: none;
+      padding-left: 12px;
+      font-size: 16px;
+
+    }
+      .search-bar::placeholder {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 13px;
+
+      }
+    .header {
+      height: 55px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border-bottom-width:1px ;
+      border-bottom-style:solid ;
+      border-color:gray ;
+      z-index: 100;
+    }
+    .left-section {
+      align-items: center;
+      display: flex;
+    }
+    body{
+      margin: 0;
+      padding-top:80px ;
+      padding-left: 96px;
+      padding-right: 24px;
+      background-color: lightgray;
+    }
+    
+    .right-section {
+      display: flex;
+       align-items: center;
+       justify-content: space-between;
+      width: 300px;
+      flex-shrink: 0;
+    }
+    .hamburger-menu {
+      height: 24px;
+      margin-left: 24px;
+      margin-right:24px ;
+    }
+    .youtube-logo {
+      height: 20px;
+      }
+     
+      .voice-search-button{
+             height: 40px; 
+             width: 40px;
+      }
+      .layomi{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .side-bar{
+        position:fixed ;
+        left: 0;
+        bottom: 0;
+        top: 55px;
+        background-color: white;
+        width: 72px;
+
+      }
+      .video-time{
+        background-color: black;
+        color: white;
+        position: absolute;
+        bottom: 100px;
+        right: 13px;
+      }
+      .notifications{
+        position: relative;
+      }
+      .notification-count{
+        position: absolute;
+        top: -2px;
+        right: -5px;
+        background-color: red;
+        color: white;
+        font-family: Arial, ;
+        font-size: 11px;
+        padding-left:5px ;
+        padding-right: 5px ;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-radius: 10px;
+        
+      }
+      .side-bar-item{
+        height: 75px;
+        margin-bottom: 1px;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+        cursor: pointer;
+        flex-direction: column;
+        z-index: 200;
+
+      }
+      .side-bar-item:hover{
+        background-color: lightgray;
+      }
+      .side-bar-item img{
+        height: 24px;
+        margin-bottom: 5px;
+      }
+      .side-bar-item div{
+        font-size: 10px;
+        font-family: Arial, ;
+    
+      }
+      
+  </style>
+</head>
+<body>
+<div class="header"> 
+  <div class="left-section">
+    <img   class="hamburger-menu" src="picture/hamburger-menu.svg" alt="">
+     <img class="youtube-logo" src="picture/youtube-logo.svg" alt="">
+     
+  </div>
+  <div class="middle-section">
+    <input class="search-bar" type="text" placeholder="Search">
+   <button class="search-button">
+    <img src="picture/search.svg" alt="">
+   </button>
+   <button class="voice-search-button">
+    <img src="picture/voice-search-icon.svg" alt="">
+   </button>
+ 
+  </div>
+
+  <div class="right-section">
+    <img class="hamburger-menu" src="picture/upload.svg" alt="">
+    
+    <img  class="hamburger-menu" src="picture/youtube-apps.svg" alt="">
+     <div class="notifications">
+      <img class="youtube-logo" src="picture/notifications.svg" alt="">
+     <div class="notification-count">9</div>
+    </div>
+    
+      
+     <img  class="layomi"  src="picture/c.jpg" alt=""> 
+    </div>
+</div>
+ <div class="side-bar">
+<div class="side-bar-item"><img src="picture/home.svg" alt="">
+  <div>home</div>
+</div>
+<div class="side-bar-item"><img src="picture/explore.svg" alt="">
+  <div>explore</div>
+</div>
+<div class="side-bar-item"> <img  src="picture/subscriptions.svg" alt="">
+  <div>subscriptions</div>
+  
+</div>
+<div class="side-bar-item"><img src="picture/originals.svg" alt="">
+  <div>originals</div>
+</div>
+<div class="side-bar-item">
+  <img src="picture/youtube-music.svg" alt="">
+  <div>youtube music</div>
+</div>
+<div class="side-bar-item">
+  <img src="picture/library.svg" alt="">
+  <div>library</div>
+</div>
+
+
+
+
+
+ </div>
+
+  <div class="emm">
+    <!-- Video 1 -->
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY"><img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail"></a>
+      
+      <div class="video-details">
+        <div class="channel-pic">
+          
+          <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+       <div class="video-time">14:20</div>
+
+        </div>
+        <div class="video-info">
+          <p class="video-title">Talking tech and AI on the heels of Google I/O...</p>
+          <p class="channel-name">Marques Brownlee</p>
+          <p class="views-date">3.4M views • 1 month ago</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=mP0RAo9SKZk"><img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail"></a>
+     
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 8:22</div>
+        <div class="video-info">
+          <p class="video-title">Try not to laugh challenge #9</p>
+          <p class="channel-name">Markiplier</p>
+          <p class="views-date">19M views • 4 months ago</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=FgjPQQeTh1w"><img class="thumbnail" src="picture/thumbnail-3.webp" alt="Thumbnail"></a>
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-3.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 9:13</div>
+        <div class="video-info">
+          <p class="video-title">Crazy Tik Toks Taken Moments Before DISASTER</p>
+          <p class="channel-name">sssniperwolf</p>
+          <p class="views-date">1.2M views • 1 year ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=86CQq3pKSUw"> <img class="thumbnail" src="picture/thumbnail-5.webp" alt="Thumbnail"></a>
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-5.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 11:17</div>
+        <div class="video-info">
+          <p class="video-title">kadana's Algorithm to maximun sum subarray problem</p>
+          <p class="channel-name">cs Dojo</p>
+          <p class="views-date">519k views • 5 years ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=yXWw0_UfSFg"> <img class="thumbnail" src="picture/thumbnail-6.webp" alt="Thumbnail"></a>
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-6.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 19:59</div>
+        <div class="video-info">
+          <p class="video-title">anything you can fit in cicle i'll pay for </p>
+          <p class="channel-name">MrBeast</p>
+          <p class="views-date">141M views • 1 year ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=fNVa1qMbF9Y"><img class="thumbnail" src="picture/thumbnail-7.webp" alt="Thumbnail"></a>
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-7.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 10:13</div>
+        <div class="video-info">
+          <p class="video-title">Why Planes Don't Fly over Tibet </p>
+          <p class="channel-name">RealLifeLORE</p>
+          <p class="views-date">6.6M views • 1 year ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=lFm4EM1juls"><img class="thumbnail" src="picture/thumbnail-8.webp" alt="Thumbnail"></a>
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-8.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 7:12</div>
+        <div class="video-info">
+          <p class="video-title">Inside The World's Biggest passenger plane</p>
+          <p class="channel-name">Tech Vision</p>
+          <p class="views-date">3.7M views • 10 months ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=ixmxOlcrlUc"><img class="thumbnail" src="picture/thumbnail-9 (1).webp" alt="Thumbnail"></a>
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-9.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 13:17</div>
+        <div class="video-info">
+          <p class="video-title">The secret to superhuman strength and agility</p>
+          <p class="channel-name">Thenx</p>
+          <p class="views-date">20M views • 3 years ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=R2vXbFp5C9o"><img class="thumbnail" src="picture/thumbnail-10.webp" alt="Thumbnail"></a>
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-10.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 7:53</div>
+        <div class="video-info">
+          <p class="video-title">how to make World's largest cruise ship makes 30,000 meals every day</p>
+          <p class="channel-name">business insider</p>
+          <p class="views-date">14M views •1 year ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=0nZuYyXET3s"> <img class="thumbnail" src="picture/thumbnail-11.webp" alt="Thumbnail"></a>
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-11.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 4:10</div>
+        <div class="video-info">
+          <p class="video-title">
+            Dubai's Crazy Underwater Train and Other Things #Only in Dubai</p>
+          <p class="channel-name">Destination Tips</p>
+          <p class="views-date">12M views • 5  years ago</p>
+        </div>
+      </div>
+    </div>
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=9iMGFqMmUFs"><img class="thumbnail" src="picture/thumbnail-12.webp" alt="Thumbnail"></a>
+      
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-12.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 4:22</div>
+        <div class="video-info">
+          <p class="video-title">
+            What would happen if you didn’t drink water? - Mia Nacamulli</p>
+          <p class="channel-name">TED-ED</p>
+          <p class="views-date">12M views • 5 years ago</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Video 4 -->
+    <div class="video-container">
+      <a href="https://www.youtube.com/watch?v=094y1Z2wpJg"><img class="thumbnail" src="picture/thumbnail-4.webp" alt="Thumbnail"></a>
+      
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-4.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-time"> 22:09</div>
+        <div class="video-info">
+          <p class="video-title"> the simplest math problem no one can solve- calatzha 101</p>
+          <p class="channel-name"> veritasium</p>
+          <p class="views-date">18M views • 4 months ago</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+</body>
+</html>

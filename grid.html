@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Grid</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .search-bar {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      padding: 8px;
+      margin: 10px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .emm {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr ));
+      grid-gap: 15px;
+      padding: 20px;
+    }
+
+    .video-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .thumbnail {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .video-details {
+      display: flex;
+      margin-top: 8px;
+    }
+
+    .channel-pic {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+    }
+
+    .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .video-info {
+      flex: 1;
+      margin-left: 10px;
+    }
+
+    .video-title {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 18px;
+      margin-bottom: 6px;
+    }
+
+    .channel-name, .views-date {
+      font-size: 12px;
+      color: rgb(96, 96, 96);
+    }
+  </style>
+</head>
+<body>
+
+  <input class="search-bar" type="text" placeholder="Search">
+
+  <div class="emm">
+
+    <div class="video-container">
+      <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+          </p>
+          <p class="channel-name">Marques Brownlee</p>
+          <p class="views-date">3.4M views • 1 month ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail">
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try not to laugh challenge #9</p>
+          <p class="channel-name">Markiplier</p>
+          <p class="views-date">19M views • 4 months ago</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="video-container">
+      <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+          </p>
+          <p class="channel-name">Marques Brownlee</p>
+          <p class="views-date">3.4M views • 1 month ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail">
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try not to laugh challenge #9</p>
+          <p class="channel-name">Markiplier</p>
+          <p class="views-date">19M views • 4 months ago</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="emm">
+    <div class="video-container">
+      <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+          </p>
+          <p class="channel-name">Marques Brownlee</p>
+          <p class="views-date">3.4M views • 1 month ago</p>
+        </div>
+      </div>
+    </div>
+     <div class="emm">
+    <div class="video-container">
+      <img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail">
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try not to laugh challenge #9</p>
+          <p class="channel-name">Markiplier</p>
+          <p class="views-date">19M views • 4 months ago</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    <div class="video-container">
+      <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+          </p>
+          <p class="channel-name">Marques Brownlee</p>
+          <p class="views-date">3.4M views • 1 month ago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-container">
+      <img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail">
+      <div class="video-details">
+        <div class="channel-pic">
+          <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try not to laugh challenge #9</p>
+          <p class="channel-name">Markiplier</p>
+          <p class="views-date">19M views • 4 months ago</p>
+
+
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<div class="emm">
+  <div class="video-container">
+    <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+    <div class="video-details">
+      <div class="channel-pic">
+        <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+      </div>
+      <div class="video-info">
+        <p class="video-title">
+          Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+        </p>
+        <p class="channel-name">Marques Brownlee</p>
+        <p class="views-date">3.4M views • 1 month ago</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-container">
+    <img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail">
+    <div class="video-details">
+      <div class="channel-pic">
+        <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+      </div>
+      <div class="video-info">
+        <p class="video-title">Try not to laugh challenge #9</p>
+        <p class="channel-name">Markiplier</p>
+        <p class="views-date">19M views • 4 months ago</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="emm">
+  <div class="video-container">
+    <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+    <div class="video-details">
+      <div class="channel-pic">
+        <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+      </div>
+      <div class="video-info">
+        <p class="video-title">
+          Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+        </p>
+        <p class="channel-name">Marques Brownlee</p>
+        <p class="views-date">3.4M views • 1 month ago</p>
+      </div>
+    </div>
+  </div>
+   <div class="emm">
+  <div class="video-container">
+    <img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail">
+    <div class="video-details">
+      <div class="channel-pic">
+        <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+      </div>
+      <div class="video-info">
+        <p class="video-title">Try not to laugh challenge #9</p>
+        <p class="channel-name">Markiplier</p>
+        <p class="views-date">19M views • 4 months ago</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <div class="video-container">
+    <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+    <div class="video-details">
+      <div class="channel-pic">
+        <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+      </div>
+      <div class="video-info">
+        <p class="video-title">
+          Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+        </p>
+        <p class="channel-name">Marques Brownlee</p>
+        <p class="views-date">3.4M views • 1 month ago</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-container">
+    <img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail">
+    <div class="video-details">
+      <div class="channel-pic">
+        <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+      </div>
+      <div class="video-info">
+        <p class="video-title">Try not to laugh challenge #9</p>
+        <p class="channel-name">Markiplier</p>
+        <p class="views-date">19M views • 4 months ago</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <div class="video-container">
+    <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+    <div class="video-details">
+      <div class="channel-pic">
+        <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+      </div>
+      <div class="video-info">
+        <p class="video-title">
+          Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+        </p>
+        <p class="channel-name">Marques Brownlee</p>
+        <p class="views-date">3.4M views • 1 month ago</p>
+
+        <div class="video-container">
+          <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+          <div class="video-details">
+            <div class="channel-pic">
+              <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+              </p>
+              <p class="channel-name">Marques Brownlee</p>
+              <p class="views-date">3.4M views • 1 month ago</p>
+            </div>
+          </div>
+        </div>
+         <div class="emm">
+          <div class="video-container">
+            <img class="thumbnail" src="picture/thumbnail-1.webp" alt="Thumbnail">
+            <div class="video-details">
+              <div class="channel-pic">
+                <img class="profile-pic" src="chennel-pic/channel-1.jpeg" alt="Channel Picture">
+              </div>
+              <div class="video-info">
+                <p class="video-title">
+                  Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+                </p>
+                <p class="channel-name">Marques Brownlee</p>
+                <p class="views-date">3.4M views • 1 month ago</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="video-container">
+            <img class="thumbnail" src="picture/thumbnail-2.webp" alt="Thumbnail">
+            <div class="video-details">
+              <div class="channel-pic">
+                <img class="profile-pic" src="chennel-pic/channel-2.jpeg" alt="Channel Picture">
+              </div>
+              <div class="video-info">
+                <p class="video-title">Try not to laugh challenge #9</p>
+                <p class="channel-name">Markiplier</p>
+                <p class="views-date">19M views • 4 months ago</p>
+              </div>
+            </div>
+          </div>
+      
+        
+    
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
+</body>
+</html>
